@@ -9,8 +9,11 @@ from decouple import config
 from fastapi import Request, HTTPException, status, APIRouter, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
+from api.user import UserModel, User
+
 JWT_SECRET = config("SECRET")
 JWT_ALGORITHM = config("ALGORITHM")
+salt = os.urandom(32)
 
 
 class JWTBearer(HTTPBearer):
@@ -42,14 +45,15 @@ class JWTBearer(HTTPBearer):
 
 
 class Authenticator:
-    salt = os.urandom(32)
 
     @staticmethod
-    def sign_jwt(user_id: str) -> Dict[str, str]:
+    def sign_jwt(user: User) -> dict:
         payload = {
-            'user_id': user_id,
+            'id': user.pk(),
+            'email': user.email,
             'expires': time.time() + 600
         }
+        print(payload)
         return jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
 
     @staticmethod
@@ -61,6 +65,6 @@ class Authenticator:
             return {}
 
     @staticmethod
-    def hash_text(__self__, plain_text: str):
-        digest = hashlib.pbkdf2_hmac('sha256', plain_text.encode(), salt=__self__.salt, iterations=1000)
+    def hash_text(plain_text):
+        digest = hashlib.pbkdf2_hmac('sha256', plain_text.encode(), salt=salt, iterations=1000)
         return digest.hex()

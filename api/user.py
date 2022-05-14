@@ -9,17 +9,17 @@ from pydantic import BaseModel, SecretStr, Field
 
 
 class UserModel(BaseModel):
-    name: Optional[str] = Field(None, description="Name of the user")
-    avatar: Optional[str] = Field(None, description="User gravatar url for avatar")
-    email: str = Field(...,  description="User email")
-    password: SecretStr = Field(..., description="User password")
+    name: str
+    avatar: str
+    email: str
+    password: str
 
 
 class User(Document):
-    name = StringField(max_length=100)
+    name = StringField()
     avatar = StringField(default="")
-    email = StringField(max_length=100, required=True)
-    password = StringField(max_length=100, required=True)
+    email = StringField(max_length=100, required=True, unique=True)
+    password = StringField(required=True)
     date_modified = DateTimeField(default=datetime.datetime.utcnow)
 
 
