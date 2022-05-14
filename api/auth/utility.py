@@ -1,18 +1,16 @@
-import os
-import time
-from typing import Dict
 import hashlib
-
+import os
 import jwt
+import time
+
+from typing import Dict
+
 from decouple import config
-from fastapi import Request
+from fastapi import Request, HTTPException, status, APIRouter, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
-from api.user import UserModel, UserSchema
-from app import app, json, HTTPException, status
-
-JWT_SECRET = config("secret")
-JWT_ALGORITHM = config("algorithm")
+JWT_SECRET = config("SECRET")
+JWT_ALGORITHM = config("ALGORITHM")
 
 
 class JWTBearer(HTTPBearer):
@@ -30,8 +28,8 @@ class JWTBearer(HTTPBearer):
         else:
             raise HTTPException(status_code=403, detail="Invalid authorization code.")
 
-
-    def verify_jwt(self, jwtoken: str) -> bool:
+    @staticmethod
+    def verify_jwt(jwtoken: str) -> bool:
         is_token_valid: bool = False
 
         try:
@@ -54,7 +52,6 @@ class Authenticator:
         }
         return jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
 
-
     @staticmethod
     def decode_jwt(token: str) -> dict:
         try:
@@ -67,34 +64,3 @@ class Authenticator:
     def hash_text(__self__, plain_text: str):
         digest = hashlib.pbkdf2_hmac('sha256', plain_text.encode(), salt=__self__.salt, iterations=1000)
         return digest.hex()
-
-
-
-@app.post('/auth/register', tags=['Auth'])
-async def register(data: UserModel):
-    if len(UserSchema(email=data.email)) > 0 :
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User Already exists!")
-    user = UserSchema(
-        name=data.name,
-        avatar=data.avatar,
-        email=data.email,
-        password=Authenticator.hash_text(data.password)
-    ).save()
-    return json.loads(user.to_json())
-
-
-@app.post('/auth/login', tags=['Auth'])
-async def login(data: UserModel):
-    user = UserSchema(
-        email=data.email,
-        password=hashlib.sha256(data.password).hexdigest()
-    )
-    if len(user) <= 0:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User does not exist")
-    if user.password == Authenticator.hash_text(data.password) :
-        response = json.loads(user.to_json())
-        response['token'] = Authenticator.sign_jwt(data.email)
-        return response
-    else:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid Credentials")
-

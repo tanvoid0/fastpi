@@ -1,40 +1,50 @@
 import datetime
+import json
+from typing import Optional
 
-from app import app, json, status, BaseModel
-from mongoengine import Document, StringField, IntField, DateTimeField
+from mongoengine import Document, StringField, IntField, DateTimeField, BooleanField
+from pydantic import BaseModel, Field
+from fastapi import status, APIRouter
 
 
 class TodoModel(BaseModel):
     name: str
-    description: str
-    deadline: datetime.datetime
-    priority: int
-    label: str
-    date_modified: datetime.datetime
+    description: Optional[str]
+    deadline: Optional[datetime.datetime]
+    priority: Optional[int]
+    label: Optional[str]
+    done: Optional[bool] = Field(default=False)
 
 
-class TodoSchema(Document):
+class Todo(Document):
     name = StringField(max_length=200, required=True)
     description = StringField(max_length=500)
     deadline = DateTimeField()
     priority = IntField(default=0)
     label = StringField(default="")
+    done = BooleanField(default=False)
     date_modified = DateTimeField(default=datetime.datetime.utcnow)
 
 
-@app.get('/api/todo', tags=['Todo'])
+router = APIRouter(
+    prefix="/api/todo",
+    tags=["Todo"],
+)
+
+
+@router.get('/')
 def get_all_todos():
-    return json.loads(TodoSchema.objects().to_json())
+    return json.loads(Todo.objects().to_json())
 
 
-@app.get('/api/todo/{todo_id}', tags=['Todo'])
+@router.get('/api/todo/{todo_id}')
 def get_todo(todo_id: str):
-    return json.loads(TodoSchema(id=todo_id).to_json())
+    return json.loads(Todo(id=todo_id).to_json())
 
 
-@app.post('/api/todo', tags=['Todo'], status_code=status.HTTP_201_CREATED)
+@router.post('/api/todo')
 def create_todo(data: TodoModel):
-    todo = TodoSchema(
+    todo = Todo(
         name=data.name,
         description=data.description,
         deadline=data.deadline,
@@ -44,9 +54,9 @@ def create_todo(data: TodoModel):
     return json.loads(todo.to_json())
 
 
-@app.put('/api/todo/{todo_id}', tags=['Todo'])
+@router.put('/{todo_id}')
 def update_todo(todo_id: str, data: TodoModel):
-    todo = TodoSchema.objects(id=todo_id)
+    todo = Todo.objects(id=todo_id)
     todo.update(
         name=data.name,
         description=data.description,
@@ -57,8 +67,8 @@ def update_todo(todo_id: str, data: TodoModel):
     return json.loads(todo.to_json())
 
 
-@app.delete('/api/todo/{todo_id}', tags=['Todo'], status_code=status.HTTP_204_NO_CONTENT)
+@router.delete('/{todo_id}')
 def delete_todo(todo_id: str):
-    TodoSchema(id=todo_id).delete()
+    Todo(id=todo_id).delete()
     return
 

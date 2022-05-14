@@ -1,2 +1,5 @@
 .idea
 .env
+__pycache__/
+api/__pychace__/
+.pytest_cache/

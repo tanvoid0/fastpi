@@ -1,33 +1,45 @@
-from app import app, json, status
-from mongoengine import Document, StringField, IntField, ListField, DynamicDocument
+import json
+
+from mongoengine import Document, StringField, IntField, ListField
 from pydantic import BaseModel
+from fastapi import status, APIRouter
+
+router = APIRouter(
+    prefix="/api/employee",
+    tags=['User'],
+    responses={
+        404: {
+            "description": "Not found"
+        }
+    }
+)
 
 
-class Employee(BaseModel):
+class EmployeeModel(BaseModel):
     name: str
     age: int
     teams: list
 
 
-class MongoEmployee(Document):
+class Employee(Document):
     name = StringField(max_length=100)
     age = IntField()
     teams = ListField()
 
 
-@app.get('/api/employee', tags=['Employee'])
+@router.get('/api/employee', tags=['Employee'])
 def get_all_employees():
-    return json.loads(MongoEmployee.objects().to_json())
+    return json.loads(Employee.objects().to_json())
 
 
-@app.post('/api/employee', tags=['Employee'], status_code=status.HTTP_201_CREATED)
-def create_employee(data: Employee):
-    employee = MongoEmployee(name=data.name, age=data.age, teams=data.teams).save()
+@router.post('/api/employee', tags=['Employee'], status_code=status.HTTP_201_CREATED)
+def create_employee(data: EmployeeModel):
+    employee = Employee(name=data.name, age=data.age, teams=data.teams).save()
     return json.loads(employee.to_json())
 
 
-@app.put('/api/employee/{employee_id}', tags=['Employee'])
-def update_employee(employee_id: str, data: Employee):
-    employee = MongoEmployee.objects(id=employee_id)
+@router.put('/api/employee/{employee_id}', tags=['Employee'])
+def update_employee(employee_id: str, data: EmployeeModel):
+    employee = Employee.objects(id=employee_id)
     employee.update(name=data.name, age=data.age, teams=data.teams)
     return json.loads(employee.to_json())
