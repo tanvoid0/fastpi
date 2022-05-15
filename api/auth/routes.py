@@ -1,9 +1,9 @@
 import json
 import hashlib
-from fastapi import HTTPException, status, APIRouter, Depends
-from pydantic import SecretStr
+from fastapi import HTTPException, status, APIRouter, Depends, Request
+from pydantic import SecretStr, BaseModel, Field
 
-from api.auth.utility import Authenticator, JWTBearer
+from api.auth.utility import JWTBearer, hash_text, sign_jwt, verify_hash, decode_jwt, get_id_from_jwt
 from api.user import UserModel, User
 
 
@@ -13,43 +13,44 @@ router = APIRouter(
 )
 
 
+class LoginModel(BaseModel):
+    email: str = Field("new@mail.com", description="Enter email")
+    password: str = Field("new123", description="Enter password")
+
+
 @router.post('/register')
 async def register(data: UserModel):
-    if User.objects().get(email=data.email):
-        print(json.loads(User(email=data.email).to_json()))
+    if User.objects(email=data.email):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User Already exists!")
+
+    hashed_password = hash_text(data.password)
     user = User(
         name=data.name,
         avatar=data.avatar,
         email=data.email,
-        password=Authenticator.hash_text(data.password)
+        password=hashed_password
     ).save()
-    print(user.to_json())
     response = json.loads(user.to_json())
-    # response['token'] =
-    return Authenticator.sign_jwt(user)
+    response['token'] = sign_jwt(user)
+    return response
 
 
 @router.post('/login')
-async def login(email: str, password: str):
-    print(password)
-    user = User(
-        email=email
-    )
-    print(user.to_json())
-    print(user.password)
-    print(Authenticator.hash_text(password))
+async def login(data: LoginModel):
+    print(data.password)
+    user = User.objects(email=data.email)
     if len(user) <= 0:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User does not exist")
-    if user.password == Authenticator.hash_text(password):
+    user = user.get()
+    if verify_hash(text=data.password, hash_text=user.password):
         print("Matched")
         response = json.loads(user.to_json())
-        response['token'] = Authenticator.sign_jwt(user)
+        response['token'] = sign_jwt(user)
         return response
     else:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid Credentials")
 
 
-@router.post('/validate', dependencies=[Depends(JWTBearer())])
-async def validate():
-    return "Validated"
+@router.post('/authenticate')
+async def validate(token: str = Depends(JWTBearer())) -> str | None:
+    return get_id_from_jwt(token)

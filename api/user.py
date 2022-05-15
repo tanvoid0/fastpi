@@ -9,8 +9,8 @@ from pydantic import BaseModel, SecretStr, Field
 
 
 class UserModel(BaseModel):
-    name: str
-    avatar: str
+    name: Optional[str]
+    avatar: Optional[str]
     email: str
     password: str
 
