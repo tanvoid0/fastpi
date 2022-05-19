@@ -59,3 +59,5 @@ watchgod==0.8.2
 webencodings==0.5.1
 websockets==10.3
 zipp==3.8.0
+
+rsa~=4.8

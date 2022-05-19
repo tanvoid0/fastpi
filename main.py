@@ -2,7 +2,7 @@ import uvicorn
 from decouple import config
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
-from api.app import router as api_router
+from app import router as api_router
 
 app = FastAPI()
 host = config('HOST')
