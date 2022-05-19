@@ -1,11 +1,13 @@
 import json
 import hashlib
+
+from Crypto.Cipher import AES
 from fastapi import HTTPException, status, APIRouter, Depends, Request
 from pydantic import SecretStr, BaseModel, Field
 
+from api.auth.enigma.enigma_aes import AESCipher
 from api.auth.utility import JWTBearer, hash_text, sign_jwt, verify_hash, decode_jwt, get_id_from_jwt
 from api.user import UserModel, User
-
 
 router = APIRouter(
     prefix="/auth",
@@ -54,3 +56,15 @@ async def login(data: LoginModel):
 @router.post('/authenticate')
 async def validate(token: str = Depends(JWTBearer())) -> str | None:
     return get_id_from_jwt(token)
+
+
+@router.post("/enc")
+def encrypt(data: str):
+    aes = AESCipher()
+    return aes.encrypt(data)
+
+
+@router.post("/dec")
+def decrypt(data: str):
+    aes = AESCipher()
+    return aes.decrypt(data)
