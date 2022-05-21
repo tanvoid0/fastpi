@@ -26,14 +26,14 @@ class AESCipher:
     def decrypt(self, msg):
         return self.algo.decrypt(msg.encode())
 #
-if __name__ == '__main__':
-    # print(Fernet.generate_key())
-    msg = "Hello world"
-    aes = AESCipher()
-    enc = aes.encrypt(msg)
-    print(enc)
-    dec = aes.decrypt(enc)
-    print(dec)
+# if __name__ == '__main__':
+#     # print(Fernet.generate_key())
+#     msg = "Hello world"
+#     aes = AESCipher()
+#     enc = aes.encrypt(msg)
+#     print(enc)
+    # dec = aes.decrypt(enc)
+    # print(dec)
 #
 #     data = "study hard"
 #     rData = aes.encrypt(data)

@@ -1,0 +1,1038 @@
+{
+    "info": {
+        "name": "Tanveer Hoque",
+        "title": "Software Developer",
+        "description": "Experienced Developer with a demonstrated history of working in the computer software industry. Skilled in Problem solving, Software Development, Web Development, Android Development, Embedded Systems Development. Strong ideas and working ability with a Masters Degree focused in Computer Science.",
+        "phone": "+44 (0) 7767651102",
+        "email": "thaque20@gmail.com",
+        "username": "tanvoid0",
+        "website": "tanveerhoque.com",
+        "address": "Princess Street, Treforest, Pontypridd, CF37 1RY, Wales"
+    },
+    "languages": [
+        {
+            "name": "English",
+            "status": "Fluent"
+        },
+        {
+            "name": "Bengali",
+            "status": "Native"
+        },
+        {
+            "name": "Hindi",
+            "status": "Fluent"
+        },
+        {
+            "name": "Urdu",
+            "status": "Fluent"
+        }
+    ],
+    "academics": [
+        {
+            "title": "M.Sc. in Computer Science",
+            "institution": "University of South Wales",
+            "address": "United Kingdom",
+            "year": "2020-2021",
+            "description": "Dissertation in <strong>Designing & Implementing a Secure Lost & Found Application</strong>"
+        },
+        {
+            "title": "B.Sc. in Computer Science & Engineering",
+            "institution": "Daffodil International University",
+            "address": "Bangladesh",
+            "year": "2015-2019",
+            "description": "Dissertation in <strong>Data Analysis on Home Forestation using IoT</strong>"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Cyber Security",
+            "institution": "Arena Web Security",
+            "address": "Dhaka, Bangladesh",
+            "year": "August 2018",
+            "description": "Tested website security from <strong>SQL Injections, XSS, DDoS, redirect bypass,</strong> etc."
+        },
+        {
+            "title": "Advanced Graphics Design & Outsourcing",
+            "institution": "Bangladesh Computer Council",
+            "address": "Dhaka, Bangladesh",
+            "year": "September 2015",
+            "description": "Learned to use <strong>Adobe Photoshop, Adobe Illustrator, and Freelancing market</strong>"
+        }
+    ],
+    "achievements": [
+        {
+            "title": "Hult Prize Mumbai Regionals 2019 finale",
+            "year": "2019",
+            "address": "Mumbai, India",
+            "achievement": "Top 6 finalist",
+            "description": "Idea of<strong> Fresh food cart delivery & online marketplace </strong> with the challenge of creating a job for 10,000 youths. Had to\n <strong> beat 560 teams on campus </strong> and <strong> 60 international teams in India.</strong>"
+        },
+        {
+            "title": "DIU ICT Carnival 2019 finale",
+            "year": "2019",
+            "address": "Daffodil International University, Dhaka, Bangladesh",
+            "achievement": "Finalist",
+            "description": "Qinter, an app that helps to find <strong>find lost belongings</strong>"
+        },
+        {
+            "title": "Hult Prize Campus 2017 finale",
+            "year": "2017",
+            "address": "Daffodil International University, Dhaka, Bangladesh",
+            "achievement": "Top 6 Campus Finalist",
+            "description": "Business proposal of a Smart device that helps to do smart gardening with the challenge of renewable energy"
+        },
+        {
+            "title": "Inter Section Programming Contest (Team)",
+            "year": "2016",
+            "address": "Daffodil International University, Dhaka, Bangladesh",
+            "achievement": "Winner",
+            "description": null
+        }
+    ],
+    "hobbies": [
+        {
+            "name": "Video Game",
+            "icon": "fas fa-gamepad"
+        },
+        {
+            "name": "Travelling",
+            "icon": "fas fa-plane-departure"
+        },
+        {
+            "name": "Reading",
+            "icon": "fas fa-book"
+        },
+        {
+            "name": "Cycling",
+            "icon": "fas fa-biking"
+        }
+    ],
+    "name": "Tanveer",
+    "titles": [
+        "Flutter Developer",
+        "Mobile App Developer",
+        "Backend Developer"
+    ],
+    "image": "https://avatars.githubusercontent.com/u/22547527?s=400&u=943944cf0253caf99eb8015d74d85f1a73f5ea9f&v=4",
+    "about": "👋 I'm Tanveer.<br/>Experienced Developer with a demonstrated history of working in the computer software industry.<br/>Skilled in Problem solving, Software Development, Web Development, Android Development, Embedded Systems Development. Strong ideas and working ability with a Masters Degree focused in Computer Science.<br/><br/>Typically I love to work with Flutter and Nodejs.",
+    "skills": {
+        "core": [
+            {
+                "name": "Flutter",
+                "icon": "devicon-flutter-plain",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            },
+            {
+                "name": "ExpressJS",
+                "icon": "devicon-express-original-wordmark",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            },
+            {
+                "name": "ReactJS",
+                "icon": "devicon-react-original-wordmark",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            }
+        ],
+        "language": [
+            {
+                "name": "Dart",
+                "icon": "devicon-dart-plain",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            },
+            {
+                "name": "JavaScript",
+                "icon": "devicon-javascript-plain",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            },
+            {
+                "name": "TypeScript",
+                "icon": "devicon-typescript-plain",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            },
+            {
+                "name": "Python",
+                "icon": "devicon-python-plain-wordmark",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            },
+            {
+                "name": "Java",
+                "icon": "devicon-java-plain-wordmark",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            },
+            {
+                "name": "Arduino",
+                "icon": "devicon-arduino-plain",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            },
+            {
+                "name": "Bash",
+                "icon": "devicon-bash-plain",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            },
+            {
+                "name": "c++",
+                "icon": "devicon-cplusplus-plain-wordmark",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            }
+        ],
+        "platform": [
+            {
+                "name": "Cross Platform",
+                "framework": [
+                    {
+                        "name": "Flutter",
+                        "icon": "devicon-flutter-plain",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    },
+                    {
+                        "name": "React Native",
+                        "icon": "devicon-react-original",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    }
+                ]
+            },
+            {
+                "name": "Web",
+                "framework": [
+                    {
+                        "name": "ReactJS",
+                        "icon": "devicon-react-original-wordmark",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    },
+                    {
+                        "name": "VueJS",
+                        "icon": "devicon-vuejs-plain-wordmark",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    },
+                    {
+                        "name": "Laravel",
+                        "icon": "devicon-laravel-plain-wordmark",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    },
+                    {
+                        "name": "Flask",
+                        "icon": "devicon-flask-original-wordmark",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    },
+                    {
+                        "name": "Django",
+                        "icon": "devicon-django-plain",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    },
+                    {
+                        "name": ".NET Core",
+                        "icon": "devicon-dotnetcore-plain",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile",
+                "framework": [
+                    {
+                        "name": "Android",
+                        "icon": "devicon-android-plain",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    }
+                ]
+            },
+            {
+                "name": "Desktop",
+                "framework": [
+                    {
+                        "name": "ElectronJS",
+                        "icon": "devicon-electron-original-wordmark",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    },
+                    {
+                        "name": "Swing",
+                        "icon": "devicon-java-plain-wordmark",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    },
+                    {
+                        "name": ".NET Desktop",
+                        "icon": "devicon-dot-net-plain-wordmark",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    }
+                ]
+            },
+            {
+                "name": "IoT",
+                "framework": [
+                    {
+                        "name": "Arduino",
+                        "icon": "devicon-arduino-plain",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    },
+                    {
+                        "name": "Raspberry Pi",
+                        "icon": "devicon-raspberrypi-line-wordmark",
+                        "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+                    }
+                ]
+            }
+        ],
+        "database": [
+            {
+                "name": "MongoDB",
+                "icon": "devicon-mongodb-plain-wordmark",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            },
+            {
+                "name": "MySQL",
+                "icon": "devicon-mysql-plain-wordmark",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            },
+            {
+                "name": "Firebase Firestore",
+                "icon": "devicon-firebase-plain-wordmark",
+                "image": "https://cdn.iconscout.com/icon/free/png-256/code-280-460136.png"
+            }
+        ],
+        "other": [
+            "Object Oriented Programming",
+            "Data Structures & Algorithms",
+            "Docker",
+            "IoT",
+            "REST API",
+            "Git",
+            "Firebase"
+        ],
+        "oj": [
+            {
+                "name": "HackerRank",
+                "profile": "",
+                "image": "",
+                "progress": "5900+ HackOS"
+            },
+            {
+                "name": "URI",
+                "profile": "",
+                "image": "",
+                "progress": "180+ Solved"
+            },
+            {
+                "name": "FreeCodeCamp",
+                "profile": "",
+                "image": "",
+                "progress": "286+ points"
+            },
+            {
+                "name": "Timus OJ",
+                "profile": "",
+                "image": "",
+                "progress": "286+ Rating"
+            }
+        ]
+    },
+    "socials": [
+        {
+            "name": "Github",
+            "url": "https://github.com/tanvoid0",
+            "icon": "fab fa-github"
+        },
+        {
+            "name": "Instagram",
+            "url": "https://instagram.com/tanvoid0",
+            "icon": "fab fa-instagram"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Eco Friend",
+            "slug": "eco-friend",
+            "started": "2018",
+            "status": "Discontinued",
+            "description": "# Eco Friend",
+            "images": [
+                "http://tanvoid0-api.herokuapp.com/cdn/projects/eco-friend/Connection Diagram.png",
+                "http://tanvoid0-api.herokuapp.com/cdn/projects/eco-friend/Diagram.png",
+                "http://tanvoid0-api.herokuapp.com/cdn/projects/eco-friend/Flow.png",
+                "http://tanvoid0-api.herokuapp.com/cdn/projects/eco-friend/Flowchart.png",
+                "http://tanvoid0-api.herokuapp.com/cdn/projects/eco-friend/Node+csoil.png",
+                "http://tanvoid0-api.herokuapp.com/cdn/projects/eco-friend/Parts-Bill.png",
+                "http://tanvoid0-api.herokuapp.com/cdn/projects/eco-friend/Soil Sensor Flow Chart.png",
+                "http://tanvoid0-api.herokuapp.com/cdn/projects/eco-friend/dead_tree.jpg"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/eco-friend",
+            "technologies": [
+                {
+                    "name": "ESP8266",
+                    "icon": "devicon-arduino-plain"
+                },
+                {
+                    "name": "Django",
+                    "icon": "devicon-django-plain"
+                },
+                {
+                    "name": "Laravel",
+                    "icon": "devicon-laravel-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "IoT",
+                "PyCV",
+                "Pandas"
+            ],
+            "platforms": [
+                "IoT",
+                "Web"
+            ]
+        },
+        {
+            "title": "Qinter",
+            "slug": "qinter",
+            "started": "2018",
+            "status": "On going",
+            "description": "# Qinter",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": "https://github.com/tanvoid0/qinter",
+            "repo": "https://github.com/tanvoid0/qinter",
+            "technologies": [
+                {
+                    "name": "Flutter",
+                    "icon": "devicon-flutter-plain"
+                },
+                {
+                    "name": "ExpressJS",
+                    "icon": "devicon-express-original-wordmark"
+                }
+            ],
+            "tags": [
+                "Mobile App",
+                "QR"
+            ],
+            "platforms": [
+                "Android",
+                "iOS",
+                "Web"
+            ]
+        },
+        {
+            "title": "Problem Solving",
+            "slug": "problem-solving",
+            "started": "2016",
+            "status": "Release",
+            "description": "# Problem Solving",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/problem-solving",
+            "technologies": [
+                {
+                    "name": "c++",
+                    "icon": "devicon-cplusplus-plain-wordmark"
+                },
+                {
+                    "name": "python",
+                    "icon": "devicon-python-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "Online Judge",
+                "Problem Solving",
+                "Critical Thinking",
+                "Interview prep"
+            ],
+            "platforms": [
+                "Web"
+            ]
+        },
+        {
+            "title": "Gamestop",
+            "slug": "gamestop",
+            "started": "2021",
+            "status": "Deployed",
+            "description": "# Gamestop",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/gamestop",
+            "technologies": [
+                {
+                    "name": "Flutter",
+                    "icon": "devicon-flutter-plain"
+                },
+                {
+                    "name": "ExpressJS",
+                    "icon": "devicon-express-original-wordmark"
+                }
+            ],
+            "tags": [
+                "Game Review",
+                "Mobile App"
+            ],
+            "platforms": [
+                "Android",
+                "iOS",
+                "Windows",
+                "Linux",
+                "Mac"
+            ]
+        },
+        {
+            "title": "MovieFlix",
+            "slug": "movieflix",
+            "started": "2021",
+            "status": "Deployed",
+            "description": "# MovieFlix",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/movieflix",
+            "technologies": [
+                {
+                    "name": "Flutter",
+                    "icon": "devicon-flutter-plain"
+                }
+            ],
+            "tags": [
+                "Movie",
+                "Review"
+            ],
+            "platforms": [
+                "Cross Platform"
+            ]
+        },
+        {
+            "title": "Password Manager",
+            "slug": "password-manager",
+            "started": "2021",
+            "status": "Deployed",
+            "description": "# Password Manager",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/password-manager",
+            "technologies": [
+                {
+                    "name": ".NET core",
+                    "icon": "devicon-dotnetcore-plain"
+                }
+            ],
+            "tags": [
+                "Password",
+                "Cryptography"
+            ],
+            "platforms": [
+                "Web"
+            ]
+        },
+        {
+            "title": "7 DOF Robot",
+            "slug": "7-dof-robot",
+            "started": "2019",
+            "status": "Deployed",
+            "description": "# 7 DOF Robot",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/7-dof-robot",
+            "technologies": [
+                {
+                    "name": "Arduino",
+                    "icon": "devicon-arduino-plain"
+                }
+            ],
+            "tags": [
+                "Robot",
+                "Embedded"
+            ],
+            "platforms": [
+                "Embedded"
+            ]
+        },
+        {
+            "title": "Queue Simulation",
+            "slug": "single-server-queue-sim",
+            "started": "2017",
+            "status": "Deployed",
+            "description": "# Queue Simulation",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/single-server-queue-sim",
+            "technologies": [
+                {
+                    "name": "JavaScript",
+                    "icon": "devicon-javascript-plain"
+                }
+            ],
+            "tags": [
+                "Simulation",
+                "Queue"
+            ],
+            "platforms": [
+                "Web"
+            ]
+        },
+        {
+            "title": "Prescription",
+            "slug": "prescription-management",
+            "started": "2017",
+            "status": "Deployed",
+            "description": "# Prescription",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/prescription-management",
+            "technologies": [
+                {
+                    "name": "Laravel",
+                    "icon": "devicon-laravel-plain-wordmark"
+                },
+                {
+                    "name": "jQuery",
+                    "icon": "devicon-jquery-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "Management System",
+                "PDF"
+            ],
+            "platforms": [
+                "Web"
+            ]
+        },
+        {
+            "title": "Vlog",
+            "slug": "vlog",
+            "started": "2018",
+            "status": "Deployed",
+            "description": "# Vlog",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/vlog",
+            "technologies": [
+                {
+                    "name": "Laravel",
+                    "icon": "devicon-laravel-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "vlog"
+            ],
+            "platforms": [
+                "Web"
+            ]
+        },
+        {
+            "title": "Teamwork",
+            "slug": "teamwork",
+            "started": "2019",
+            "status": "Ongoing",
+            "description": "# Teamwork",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/teamwork",
+            "technologies": [
+                {
+                    "name": "Laravel",
+                    "icon": "devicon-laravel-plain-wordmark"
+                },
+                {
+                    "name": "VueJS",
+                    "icon": "devicon-vuejs-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "Management System",
+                "Game Scheduler"
+            ],
+            "platforms": [
+                "Web"
+            ]
+        },
+        {
+            "title": "Blood Bank",
+            "slug": "blood-bank",
+            "started": "2018",
+            "status": "Deployed",
+            "description": "# Blood Bank",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/blood-bank",
+            "technologies": [
+                {
+                    "name": "Laravel",
+                    "icon": "devicon-laravel-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "Management",
+                "Mailing"
+            ],
+            "platforms": [
+                "Web"
+            ]
+        },
+        {
+            "title": "Chat App",
+            "slug": "chat-app",
+            "started": "2020",
+            "status": "Deployed",
+            "description": "# Chat App",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/chat-app",
+            "technologies": [
+                {
+                    "name": "ReactJS",
+                    "icon": "devicon-react-original-wordmark"
+                }
+            ],
+            "tags": [
+                "Chat",
+                "Socket"
+            ],
+            "platforms": [
+                "Web"
+            ]
+        },
+        {
+            "title": "Genect",
+            "slug": "genect",
+            "started": "2019",
+            "status": "Deployed",
+            "description": "# Genect",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/genect",
+            "technologies": [
+                {
+                    "name": "jQuery",
+                    "icon": "devicon-jquery-plain-wordmark"
+                },
+                {
+                    "name": "Python",
+                    "icon": "devicon-python-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "Data Mining",
+                "Machine Learning"
+            ],
+            "platforms": [
+                "Web"
+            ]
+        },
+        {
+            "title": "Audio sensing lights",
+            "slug": "audio-sensing-lights",
+            "started": "2019",
+            "status": "Deployed",
+            "description": "# Audio sensing lights",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/audio-sensing-lights",
+            "technologies": [
+                {
+                    "name": "Raspberry Pi",
+                    "icon": "devicon-raspberrypi-line-wordmark"
+                },
+                {
+                    "name": "IoT",
+                    "icon": "devicon-embeddedc-plain"
+                }
+            ],
+            "tags": [
+                "Lights",
+                "Embedded"
+            ],
+            "platforms": [
+                "Raspberry Pi"
+            ]
+        },
+        {
+            "title": "Power Timer",
+            "slug": "power-timer",
+            "started": "2017",
+            "status": "Deployed",
+            "description": "# Power Timer",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/power-timer",
+            "technologies": [
+                {
+                    "name": ".NET Desktop",
+                    "icon": "devicon-dot-net-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "desktop",
+                "power-off timer"
+            ],
+            "platforms": [
+                "Windows"
+            ]
+        },
+        {
+            "title": "Coolpad",
+            "slug": "coolpad",
+            "started": "2016",
+            "status": "Deployed",
+            "description": "# Coolpad",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/coolpad",
+            "technologies": [
+                {
+                    "name": "Swing",
+                    "icon": "devicon-java-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "Desktop",
+                "Notepad",
+                "Editor",
+                "Cryptography"
+            ],
+            "platforms": [
+                "Windows",
+                "Linux",
+                "Mac"
+            ]
+        },
+        {
+            "title": "Mailbomb",
+            "slug": "mailbomb",
+            "started": "2017",
+            "status": "Deployed",
+            "description": "# Mailbomb",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/mailbomb",
+            "technologies": [
+                {
+                    "name": ".NET Desktop",
+                    "icon": "devicon-dot-net-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "Mailbomb",
+                "Cyber Testing"
+            ],
+            "platforms": [
+                "Windows"
+            ]
+        },
+        {
+            "title": "Mailbomb-script",
+            "slug": "mailbomb-script",
+            "started": "2017",
+            "status": "Deployed",
+            "description": "# Mailbomb-script",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/mailbomb-script",
+            "technologies": [
+                {
+                    "name": "Python",
+                    "icon": "devicon-python-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "Script",
+                "Cyber Testing"
+            ],
+            "platforms": [
+                "Windows",
+                "Mac",
+                "Linux"
+            ]
+        },
+        {
+            "title": "Snake & Ladders",
+            "slug": "snake-and-ladders",
+            "started": "2017",
+            "status": "Deployed",
+            "description": "# Snake & Ladders",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/snake-and-ladders",
+            "technologies": [
+                {
+                    "name": "Swing",
+                    "icon": "devicon-java-plain-wordmark"
+                },
+                {
+                    "name": "Java",
+                    "icon": "devicon-java-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "Game"
+            ],
+            "platforms": [
+                "Windows",
+                "Mac",
+                "Linux"
+            ]
+        },
+        {
+            "title": "Snake 3D",
+            "slug": "snake-3d",
+            "started": "2018",
+            "status": "Deployed",
+            "description": "# Snake 3D",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/snake-3d",
+            "technologies": [
+                {
+                    "name": "Unity",
+                    "icon": "devicon-unity-original-wordmark"
+                },
+                {
+                    "name": "c#",
+                    "icon": "devicon-csharp-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "Game"
+            ],
+            "platforms": [
+                "Windows"
+            ]
+        },
+        {
+            "title": "Who is the thief",
+            "slug": "who-is-the-thief",
+            "started": "2018",
+            "status": "Deployed",
+            "description": "# Who is the thief",
+            "images": [
+                "https://www.designveloper.com/wp-content/uploads/2020/07/Software-Development_Banner-illustration.png"
+            ],
+            "url": null,
+            "repo": "https://github.com/tanvoid0/who-is-the-thief",
+            "technologies": [
+                {
+                    "name": "Android",
+                    "icon": "devicon-android-plain"
+                },
+                {
+                    "name": "Java",
+                    "icon": "devicon-java-plain-wordmark"
+                }
+            ],
+            "tags": [
+                "Game",
+                "Android"
+            ],
+            "platforms": [
+                "Android"
+            ]
+        }
+    ],
+    "experiences": [
+        {
+            "institution": "Samsung Research & Development Institute Bangladesh",
+            "address": "Dhaka, Bangladesh",
+            "title": "Intern",
+            "year": "2020",
+            "topics": [
+                "Algorithms",
+                "Data Structures",
+                "Problem Solving"
+            ],
+            "details": null,
+            "description": null
+        }
+    ],
+    "voluntaries": [
+        {
+            "title": "Trainer",
+            "institution": "Despotic Soft",
+            "address": "Dhaka, Bangladesh",
+            "year": "2019",
+            "description": "<ul><li>Training on Introduction to Laravel Framework</li><li>Database Designing & Modeling</li><li>REST API Testing</li><li>Web App structuring, code splitting & design kit</li></ul>"
+        },
+        {
+            "title": "Team Member",
+            "institution": "Sotej",
+            "address": "Dhaka, Bangladesh",
+            "year": "2019",
+            "description": "<ul><li>Pilot Studies</li><li>Business Planning</li><li>Administrative Management</li></ul>"
+        },
+        {
+            "title": "Vice President (Software Development Wing)",
+            "institution": "Computer & Programming Club, Daffodil International University",
+            "address": "Dhaka, Bangladesh",
+            "year": "January 2018 - December 2018",
+            "description": "<ul>\n            <li>Administrative Work</li>\n            <li>Manage and organize programs and events</li>\n            <li>Promoting & Encouraging software Development</li>\n            <li>Discussion and solution to problems faced by the developers (students') community</li>\n            <li>Workshops organized: <strong>GitHub, SEO</strong></li>\n            <li>Training organized: <strong>Web Development with PHP, Database Management with Java</strong></li>\n          </ul>"
+        },
+        {
+            "title": "Trainer",
+            "institution": "Computer & Programming Club, Daffodil International University",
+            "address": "Dhaka, Bangladesh",
+            "year": "2018",
+            "description": "<ul><li>Web Development with PHP</li><li>Database Management with Java (Co-trainer)</li></ul>"
+        },
+        {
+            "title": "Lab Assistant",
+            "institution": "Daffodil International University",
+            "address": "Dhaka, Bangladesh",
+            "year": "2017",
+            "description": "<ul><li>Object Oriented Programming</li><li>Programming & Problem Solving</li><li>Data Structures</li></ul>"
+        }
+    ],
+    "tags": [
+        "ESP8266",
+        "Django",
+        "Laravel",
+        "Flutter",
+        "ExpressJS",
+        "c++",
+        "python",
+        ".NET core",
+        "Arduino",
+        "JavaScript",
+        "jQuery",
+        "VueJS",
+        "ReactJS",
+        "Python",
+        "Raspberry Pi",
+        "IoT",
+        ".NET Desktop",
+        "Swing",
+        "Java",
+        "Unity",
+        "c#",
+        "Android"
+    ]
+}

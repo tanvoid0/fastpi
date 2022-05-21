@@ -1,34 +1,6 @@
-import datetime
-import json
-from typing import Optional
+from api.lib import *
 
-from mongoengine import Document, StringField, IntField, DateTimeField, BooleanField, ReferenceField
-from pydantic import BaseModel, Field
-from fastapi import status, APIRouter, Depends, HTTPException
-
-from api.auth.utility import JWTBearer, get_id_from_jwt
-from api.user import User
-
-
-class TodoModel(BaseModel):
-    name: str = Field(description="Enter Task")
-    description: Optional[str] = Field()
-    deadline: Optional[datetime.datetime] = Field()
-    priority: Optional[int] = Field()
-    label: Optional[str] = Field()
-    done: Optional[bool] = Field(default=False)
-
-
-class Todo(Document):
-    name = StringField(max_length=200, required=True)
-    description = StringField(max_length=500)
-    deadline = DateTimeField()
-    priority = IntField(default=0)
-    label = StringField(default="")
-    done = BooleanField(default=False)
-    date_modified = DateTimeField(default=datetime.datetime.utcnow)
-    user = ReferenceField(User)
-
+from api.todo.todo import Todo, TodoModel
 
 router = APIRouter(
     prefix="/api/todo",

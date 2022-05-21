@@ -7,9 +7,9 @@ import mongoengine as db
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel, Field
 
-from api.auth.enigma.enigma_aes import AESCipher
-from api.auth.utility import JWTBearer, get_id_from_jwt
-from api.user import User
+from service.enigma.enigma_aes import AESCipher
+from service.jwt_bearer import JWTBearer, get_id_from_jwt
+from api.user.user import UserSchema
 
 
 class PasswordType(str, Enum):
@@ -39,7 +39,7 @@ class Password(db.Document):
     note = db.StringField()
     type = db.StringField()
     date_modified = db.DateTimeField(default=datetime.datetime.utcnow)
-    user = db.ReferenceField(User)
+    user = db.ReferenceField(UserSchema)
 
 
 router = APIRouter(
