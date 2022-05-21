@@ -41,7 +41,7 @@ async def login(data: LoginModel):
 
 
 @router.post('/authenticate')
-async def validate(token: str = Depends(JWTBearer())) -> str | None:
+async def validate(token: str = Depends(JWTBearer())):
     return get_id_from_jwt(token)
 
 

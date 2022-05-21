@@ -23,7 +23,7 @@ def decode_jwt(token: str) -> dict:
         return {}
 
 
-def get_id_from_jwt(token: str) -> str | None:
+def get_id_from_jwt(token: str):
     res = decode_jwt(token)
     if res == {}:
         return None
