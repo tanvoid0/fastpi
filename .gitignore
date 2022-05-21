@@ -2,4 +2,6 @@
 __pycache__/
 api/__pychace__/
 .pytest_cache/
+/venv
+/wenv
 .env

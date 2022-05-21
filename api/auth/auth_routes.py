@@ -1,13 +1,5 @@
-# import json
-#
-# from fastapi import HTTPException, status, APIRouter, Depends
-# from pydantic import BaseModel, Field
-#
-# from service.enigma.enigma_aes import AESCipher
-# from service.jwt_bearer import JWTBearer, PasswordHasher, sign_jwt, get_id_from_jwt
-# from api.user.user import UserModel, UserSchema
-from api.auth.auth_model import LoginModel
 from api.lib import *
+from api.auth.auth_model import LoginModel
 from api.user.user import UserModel, UserSchema
 
 router = APIRouter(

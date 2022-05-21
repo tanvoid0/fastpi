@@ -1,5 +1,3 @@
-from mongoengine import DictField
-
 from api.model_lib import *
 
 

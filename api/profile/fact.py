@@ -1,6 +1,4 @@
-from typing import Optional
-
-from pydantic import BaseModel
+from api.model_lib import *
 
 
 class FactModel(BaseModel):

@@ -1,6 +1,7 @@
+from api.lib import *
+
 from api.hobby.hobby import Hobby
 from api.language.language import Language
-from api.lib import *
 from api.oj.oj import OJ
 from api.organization.organization import Academic, Achievement, Certificate, Organization
 from api.social.social import Social

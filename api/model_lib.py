@@ -8,6 +8,7 @@ from pydantic import BaseModel, Field
 from mongoengine import \
     BooleanField, \
     DateTimeField, \
+    DictField, \
     Document, \
     DynamicField, \
     EnumField, \
