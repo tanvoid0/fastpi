@@ -1,46 +1,5 @@
-import datetime
-import json
-from enum import Enum
-from typing import Optional
-
-import mongoengine as db
-from fastapi import APIRouter, Depends, HTTPException, status
-from pydantic import BaseModel, Field
-
-from service.enigma.enigma_aes import AESCipher
-from service.jwt_bearer import JWTBearer, get_id_from_jwt
-from api.user.user import UserSchema
-
-
-class PasswordType(str, Enum):
-    PASSWORD = "PASSWORD"
-    ID = "ID"
-    NOTE = "NOTE"
-    BANKING = "BANKING"
-    TOKEN = "TOKEN"
-
-
-class PasswordModel(BaseModel):
-    website: Optional[str] = Field()
-    name: str = Field()
-    username: str = Field()
-    password: str = Field()
-    category: Optional[str] = Field()
-    note: Optional[str] = Field()
-    type: Optional[PasswordType] = Field(PasswordType.PASSWORD)
-
-
-class Password(db.Document):
-    website = db.StringField()
-    name = db.StringField()
-    username = db.StringField()
-    password = db.StringField()
-    category = db.StringField()
-    note = db.StringField()
-    type = db.StringField()
-    date_modified = db.DateTimeField(default=datetime.datetime.utcnow)
-    user = db.ReferenceField(UserSchema)
-
+from api.lib import *
+from api.password.password import Password, PasswordModel
 
 router = APIRouter(
     prefix="/api/password",

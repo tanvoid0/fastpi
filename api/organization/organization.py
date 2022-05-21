@@ -1,7 +1,4 @@
-from typing import Optional
-
-from mongoengine import DynamicDocument, StringField, ListField, ReferenceField
-from pydantic import BaseModel, Field
+from api.model_lib import *
 
 from api.user.user import UserSchema
 
@@ -38,7 +35,7 @@ class VolunteerModel(OrganizationModel):
     role: Optional[str]
 
 
-class Organization(DynamicDocument):
+class Organization(Document):
     title = StringField(max_length=100, required=True)
     image = StringField(required=False)
     institution: StringField(max_length=100, required=True)
