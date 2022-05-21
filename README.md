@@ -6,9 +6,9 @@
 
 # Run
 
-`docker build -t fastpi .`
+`docker build -t tanvoid0/fastpi .`
 
-`docker run --rm -it  -p 80:80/tcp tanvoid0/fastpi:latest`
+`docker run --rm -it  -p 8080:80/tcp tanvoid0/fastpi:latest`
 `docker push fastpi:latest`
 
 

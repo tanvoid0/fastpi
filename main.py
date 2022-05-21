@@ -1,13 +1,20 @@
+import os
+
 from decouple import config
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from app import router as api_router
+ON_HEROKU = os.environ.get("ON_HEROKU")
+if ON_HEROKU:
+    port = int(os.environ.get("PORT", "17995"))
+else:
+    port = config('PORT')
 
 app = FastAPI()
 host = config('HOST')
-port = config('PORT')
-host_url = host+":"+port
-origins = [host_url, config('DB_HOST')]
+host_url = str(host)+":"+str(port)
+print(host_url)
+origins = [host_url, config('DB_HOST'), "https://tan-pi.herokuapp.com", "herokuapp.com"]
 
 app.add_middleware(
     CORSMiddleware,
