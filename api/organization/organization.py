@@ -38,11 +38,11 @@ class VolunteerModel(OrganizationModel):
 class Organization(Document):
     title = StringField(max_length=100, required=True)
     image = StringField(required=False)
-    institution: StringField(max_length=100, required=True)
-    address: StringField(required=False, default="")
-    timeline: StringField(required=False, default="")
-    description: StringField(required=False, default="")
-    activities: StringField(required=False, default="")
+    institution: StringField(max_length=100, required=False)
+    address: StringField(required=False)
+    timeline: StringField(required=False)
+    description: StringField(required=False)
+    activities: StringField(required=False)
     user: ReferenceField(UserSchema)
 
     meta = {'allow_inheritance': True}
