@@ -14,23 +14,14 @@ class UserModel(BaseModel):
     whatIDo: Optional[str]
     about: Optional[str]
     aboutDetailed: Optional[str]
-    # stacks: Optional[list[StackModel]]
-    # skills: Optional[list]
-    # academics: Optional[list[AcademicModel]]
-    # certificates: Optional[list[AcademicModel]]
-    # achievements: Optional[list[AchievementModel]]
-    # experiences: Optional[list[ExperienceModel]]
-    avatar: Optional[str]
+    username: Optional[str]
     email: str
     publicEmail: Optional[str]
-    password: str
+    password: Optional[str]
 
 
 class UserSchema(Document):
     name = StringField()
-    publicEmail = StringField()
-    email = StringField(max_length=100, required=True, unique=True)
-    password = StringField(required=True)
     fullName = StringField(required=False)
     avatar = StringField(required=False)
     coverImg = StringField(required=False)
@@ -42,15 +33,10 @@ class UserSchema(Document):
     whatIDo = StringField(required=False)
     about = StringField(required=False)
     aboutDetailed = StringField(required=False)
-    skills = DictField(required=False)
-    socials = DictField(required=False)
-    languages = DictField(required=False)
-    academics = DictField(required=False)
-    achievements = DictField(required=False)
-    certificates = DictField(required=False)
-    experiences = DictField(required=False)
-    hobbies = DictField(required=False)
-    ojs = DictField(required=False)
+    username = StringField(required=False)
+    email = StringField(max_length=100, required=True, unique=True)
+    publicEmail = StringField()
+    password = StringField(required=True)
     date_modified = DateTimeField(default=datetime.datetime.utcnow)
 
     meta = {'collection': 'user'}

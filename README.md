@@ -17,3 +17,8 @@
 `docker push tanvoid0/fastpi:latest`
 
 `uvicorn main:app --host 0.0.0.0 --port 80`
+
+
+# Mongo queries
+## Renaming Collection
+db.language.renameCollection("linguistic")

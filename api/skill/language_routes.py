@@ -2,7 +2,7 @@ from api.lib import *
 from api.skill.skill import Language, LanguageModel
 
 router = APIRouter(
-    prefix="/api/language",
+    prefix="/api/linguistic",
     tags=["Language"]
 )
 #
@@ -20,27 +20,27 @@ router = APIRouter(
 # @router.post("/")
 # def create_language(data: LanguageModel, token: str = Depends(JWTBearer())):
 #     user = get_id_from_jwt(token)
-#     language = Language(
+#     linguistic = Language(
 #         title=data.title,
 #         image=data.image,
 #         fluency=data.fluency,
 #         description=data.description,
 #         user=user
 #     ).save()
-#     return json.loads(language.to_json())
+#     return json.loads(linguistic.to_json())
 #
 #
 # @router.put("/{language_id}")
 # def update_language(language_id: str, data: LanguageModel, token: str = Depends(JWTBearer())):
-#     language = Language.objects(id=language_id)
-#     validate_authority(token, language.get().user.pk)
-#     language.update_one(
+#     linguistic = Language.objects(id=language_id)
+#     validate_authority(token, linguistic.get().user.pk)
+#     linguistic.update_one(
 #         title=data.title,
 #         image=data.image,
 #         fluency=data.fluency,
 #         description=data.description
 #     )
-#     return json.loads(language.get().to_json())
+#     return json.loads(linguistic.get().to_json())
 #
 #
 # @router.delete("/{language_id}")

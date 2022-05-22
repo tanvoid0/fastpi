@@ -10,6 +10,7 @@ from mongoengine import \
     DateTimeField, \
     DictField, \
     Document, \
+    DynamicDocument, \
     DynamicField, \
     EnumField, \
     FloatField, \

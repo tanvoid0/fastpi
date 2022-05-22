@@ -35,7 +35,7 @@ class VolunteerModel(OrganizationModel):
     role: Optional[str]
 
 
-class Organization(Document):
+class Organization(DynamicDocument):
     title = StringField(max_length=100, required=True)
     image = StringField(required=False)
     institution: StringField(max_length=100, required=False)

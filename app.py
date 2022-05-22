@@ -9,7 +9,7 @@ from api.oj import oj_routes
 from api.skill import skill_routes, language_routes, framework_routes, platform_routes
 from api.social import social_routes
 from api.todo import todo_routes
-from api.language import tongue_routes
+from api.linguistic import linguistic_routes
 from api.user import user_routes
 
 from api.organization import academic_routes, certificate_routes, achievement_routes, experience_routes
@@ -44,7 +44,7 @@ router.include_router(oj_routes.router)
 router.include_router(skill_routes.router)
 router.include_router(social_routes.router)
 router.include_router(todo_routes.router)
-router.include_router(tongue_routes.router)
+router.include_router(linguistic_routes.router)
 router.include_router(user_routes.router)
 
 
