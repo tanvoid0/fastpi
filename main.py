@@ -6,8 +6,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from app import router as api_router
 
-origins = ["localhost", config('DB_HOST'), "https://tan-pi.herokuapp.com", "herokuapp.com", "fastpi.tanv.me"]
-
+# origins = ["localhost", config('DB_HOST'), "https://tan-pi.herokuapp.com", "herokuapp.com", "fastpi.tanv.me", "192.168.0.101:8000"]
+origins = ["*"]
 app = FastAPI()
 
 app.add_middleware(
