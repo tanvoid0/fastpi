@@ -22,7 +22,6 @@ class AchievementModel(OrganizationModel):
 
 
 class CertificateModel(OrganizationModel):
-    image: Optional[str] = Field("")
     graduation: Optional[str] = Field("")
     url: Optional[str] = Field("")
 

@@ -22,3 +22,17 @@
 # Mongo queries
 ## Renaming Collection
 db.language.renameCollection("linguistic")
+
+## Adding Column with default data
+db.your_collection.updateMany(
+  {},
+  { $set: {"new_field": 1} },
+  false,
+  true
+)
+
+## Renaming Column
+db.linguistic.updateMany({}, {$rename: {"icon": "image"}}, false, true)
+
+## Changing column type
+

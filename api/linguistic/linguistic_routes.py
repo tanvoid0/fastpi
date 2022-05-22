@@ -22,7 +22,7 @@ def create_linguistic(data: LinguisticModel, token: str = Depends(JWTBearer())):
     user = get_id_from_jwt(token)
     linguistic = Linguistic(
         title=data.title,
-        icon=data.icon,
+        image=data.image,
         fluency=data.fluency,
         user=user
     ).save()
@@ -35,7 +35,7 @@ def update_linguistic(linguistic_id: str, data: LinguisticModel, token: str = De
     validate_authority(token, linguistic.get().user.pk)
     linguistic.update_one(
         title=data.title,
-        icon=data.icon,
+        image=data.image,
         fluency=data.fluency,
     )
     return json.loads(linguistic.get().to_json())

@@ -5,11 +5,11 @@ from api.user.user import UserSchema
 class SocialModel(BaseModel):
     name: str
     url: str
-    icon: Optional[str]
+    icon: Optional[int]
 
 
 class Social(Document):
     name = StringField()
     url = StringField()
-    icon = StringField(required=False)
+    icon = IntField(required=False)
     user = ReferenceField(UserSchema)
