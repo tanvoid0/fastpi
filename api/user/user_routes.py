@@ -3,7 +3,7 @@ from api.lib import *
 from api.hobby.hobby import Hobby
 from api.linguistic.linguistic import Linguistic
 from api.oj.oj import OJ
-from api.organization.organization import Academic, Achievement, Certificate, Organization
+from api.organization.organization import Academic, Achievement, Certificate, Organization, Experience
 from api.skill.skill import Skill, Language, Framework, Platform
 from api.social.social import Social
 from api.user.user import UserSchema, UserModel
@@ -47,7 +47,7 @@ def get_portfolio(username: str):
             'academics': json.loads(Academic.objects(user=uid).to_json()),
             'achievements': json.loads(Achievement.objects(user=uid).to_json()),
             'certificates': json.loads(Certificate.objects(user=uid).to_json()),
-            'experiences': json.loads(Organization.objects(user=uid).to_json())
+            'experiences': json.loads(Experience.objects(user=uid).to_json())
         }
     }
     user.update(extra_sources)

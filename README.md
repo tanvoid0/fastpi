@@ -36,3 +36,5 @@ db.linguistic.updateMany({}, {$rename: {"icon": "image"}}, false, true)
 
 ## Changing column type
 
+## Removing Column
+db.social.updateMany({}, {$unset: {icon: 1}});
