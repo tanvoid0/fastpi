@@ -36,9 +36,8 @@ class Language(Skill):
 
 
 class Framework(Skill):
-    language = ReferenceField(Language, required=False, unique=False)
+    language = ReferenceField(Language, dbref=True, required=False, unique=False)
 
 
 class Platform(Skill):
-    frameworks = ListField(ReferenceField(Framework, required=False, unique=False))
-
+    frameworks = ListField(ReferenceField(Framework, dbref=True, required=False, unique=False))

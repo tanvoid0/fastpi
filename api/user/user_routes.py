@@ -27,7 +27,7 @@ async def get_all_user():
 @router.get("/{username}")
 def get_portfolio(username: str):
     # uid = get_id_from_jwt(token)
-    user = UserSchema.objects(username=username).get()
+    user = UserSchema.objects(username=username).exclude("password").get()
     uid = str(user.pk)
     user = json.loads(user.to_json())
 
