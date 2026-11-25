@@ -1,43 +1,50 @@
-from api.model_lib import *
-from api.user.user import UserSchema
+from api.lib import *
+from api.skill.skill_model import Skill, SkillModel
+
+router = APIRouter(
+    prefix="/api/skill",
+    tags=["Skill"]
+)
 
 
-class SkillModel(BaseModel):
-    title: str
-    image: Optional[str]
-    fluency: Optional[float]
-    description: Optional[str]
+@router.get("/")
+def get_all_skills():
+    return json.loads(Skill.objects().to_json())
 
 
-class LanguageModel(SkillModel):
-    pass
+@router.get("/{skill_id}")
+def get_skill(skill_id: str):
+    return json.loads(Skill.objects(id=skill_id).get().to_json())
 
 
-class FrameworkModel(SkillModel):
-    language: Optional[str]
+@router.post("/")
+def create_skill(data: SkillModel, token: str = Depends(JWTBearer())):
+    user = get_id_from_jwt(token)
+    skill = Skill(
+        title=data.title,
+        image=data.image,
+        fluency=data.fluency,
+        description=data.description,
+        user=user
+    ).save()
+    return json.loads(skill.to_json())
 
 
-class PlatformModel(SkillModel):
-    frameworks: Optional[list]
+@router.put("/{skill_id}")
+def update_skill(skill_id: str, data: SkillModel, token: str = Depends(JWTBearer())):
+    skill = Skill.objects(id=skill_id)
+    validate_authority(token, skill.get().user.pk)
+    skill.update_one(
+        title=data.title,
+        image=data.image,
+        fluency=data.fluency,
+        description=data.description
+    )
+    return json.loads(skill.get().to_json())
 
 
-class Skill(Document):
-    title = StringField(unique=True)
-    image = StringField(required=False)
-    fluency = FloatField(required=False)
-    description = StringField(default="")
-    user = ReferenceField(UserSchema)
+@router.delete("/{skill_id}")
+def delete_skill(skill_id: str, token: str = Depends(JWTBearer())):
+    validate_authority(token, skill_id)
+    return Skill(id=skill_id).delete()
 
-    meta = {'allow_inheritance': True}
-
-
-class Language(Skill):
-    pass
-
-
-class Framework(Skill):
-    language = ReferenceField(Language, dbref=True, required=False, unique=False)
-
-
-class Platform(Skill):
-    frameworks = ListField(ReferenceField(Framework, dbref=True, required=False, unique=False))

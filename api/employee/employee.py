@@ -1,6 +1,3 @@
-from api.lib import *
-from api.model_lib import *
-
 router = APIRouter(
     prefix="/api/employee",
     tags=['User'],

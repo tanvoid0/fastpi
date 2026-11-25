@@ -35,6 +35,9 @@ db.your_collection.updateMany(
 db.linguistic.updateMany({}, {$rename: {"icon": "image"}}, false, true)
 
 ## Changing column type
+db.foo.find( { 'bad' : { $type : 1 } } ).forEach( function (x) {   
+  x.bad = new String(x.bad); // convert field to string
+  db.
 
 ## Removing Column
 db.social.updateMany({}, {$unset: {icon: 1}});

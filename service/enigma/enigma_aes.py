@@ -49,7 +49,7 @@ class AESCipher:
 #
 #
 # # Data class
-# from decouple import config
+# from decouple import settings
 #
 #
 # class MData():
@@ -93,9 +93,9 @@ class AESCipher:
 #             return self.toBase64()
 #
 #
-# # key = str.encode(config("AES_KEY"))
+# # key = str.encode(settings("AES_KEY"))
 # key = Random.get_random_bytes(32)
-# iv = str.encode(config("AES_IV"))
+# iv = str.encode(settings("AES_IV"))
 #
 # ### Encapsulation class
 # class EnigmaAES():

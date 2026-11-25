@@ -1,14 +1,24 @@
-FROM python:3.9
+# pull official base image
+FROM python:3.9.4-alpine
 
-WORKDIR /code
+# set work directory
+WORKDIR /app
 
-COPY ./requirements.txt /code/requirements.txt
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+# copy requirements file
+COPY ./requirements.txt /app/requirements.txt
 
-COPY ./ /code/
+# install dependencies
+RUN set -eux \
+    && apk add --no-cache --virtual .build-deps build-base \
+        libressl-dev libffi-dev gcc musl-dev python3-dev \
+        postgresql-dev bash \
+    && pip install --upgrade pip setuptools wheel \
+    && pip install -r /usr/src/app/requirements.txt \
+    && rm -rf /root/.cache/pip
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
-
-# If running behind a proxy like Nginx or Traefik add --proxy-headers
-# CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80", "--proxy-headers"]
+# copy project
+COPY . /app/

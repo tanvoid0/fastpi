@@ -1,6 +1,3 @@
-from api.model_lib import *
-
-
 class TestimonialModel(BaseModel):
     title: str
     username: Optional[str]

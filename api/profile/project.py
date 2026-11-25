@@ -1,6 +1,3 @@
-from api.model_lib import *
-
-
 class ProjectModel(BaseModel):
     title: str
     images: Optional[list[str]]
